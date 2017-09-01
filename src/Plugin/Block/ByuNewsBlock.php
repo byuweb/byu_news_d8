@@ -24,7 +24,7 @@ class ByuNewsBlock extends BlockBase {
    */
   public function build() {
     $storyLimit = 3;
-    $minDate = date("Y-m-d", strtotime("-2 week"));
+    $minDate = date("Y-m-d", strtotime("-1 month"));
     $maxDate = date("Y-m-d");
     $html = "<byu-news categories=\"2975\" tags=\"all\" max-date=\"{$maxDate}\" min-date=\"{$minDate}\" story-limit=\"{$storyLimit}\"></byu-news>";
     return [
