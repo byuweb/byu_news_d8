@@ -1,0 +1,5 @@
+byu_news:
+  version: 1.x
+  css:
+    theme:
+      css/byu-news-custom.css: {}
