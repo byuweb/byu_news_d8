@@ -2,6 +2,4 @@ byu_news:
   version: 1.x
   css:
     theme:
-      byu-news-components/dist/byu-news-components.css: {}
-  js:
-    byu-news-components/dist/byu-news-components.js: {}
+      css/byu-news-custom.css: {}

@@ -26,7 +26,8 @@ class ByuNewsBlock extends BlockBase {
     $storyLimit = 3;
     $minDate = date("Y-m-d", strtotime("-1 month"));
     $maxDate = date("Y-m-d");
-    $html = "<byu-news categories=\"2975\" tags=\"all\" max-date=\"{$maxDate}\" min-date=\"{$minDate}\" story-limit=\"{$storyLimit}\"></byu-news>";
+    $html = "<link type=\"text/css\" rel=\"stylesheet\" href=\"https://cdn.byu.edu/byu-news-components/1.x.x/byu-news-components.min.css\"><script async src=\"https://cdn.byu.edu/byu-news-components/1.x.x/byu-news-components.min.js\"></script>";
+    $html .= "<byu-news categories=\"2975\" tags=\"all\" max-date=\"{$maxDate}\" min-date=\"{$minDate}\" story-limit=\"{$storyLimit}\"></byu-news>";
     return [
       '#type' => 'inline_template',
       '#template' => '<div class="byu-news-block">{{ content | raw }}</div>',
