@@ -23,20 +23,25 @@ class ByuNewsBlock extends BlockBase {
    * {@inheritdoc}
    */
   public function build() {
-    $storyLimit = 3;
+    $category = 2975;
     $minDate = date("Y-m-d", strtotime("-1 month"));
     $maxDate = date("Y-m-d");
-    $html = "<link type=\"text/css\" rel=\"stylesheet\" href=\"https://cdn.byu.edu/byu-news-components/1.x.x/byu-news-components.min.css\"><script async src=\"https://cdn.byu.edu/byu-news-components/1.x.x/byu-news-components.min.js\"></script>";
-    $html .= "<byu-news categories=\"2975\" tags=\"all\" max-date=\"{$maxDate}\" min-date=\"{$minDate}\" story-limit=\"{$storyLimit}\"></byu-news>";
+    $storyLimit = 3;
+    $newsTags = "all";
+
+
     return [
-      '#type' => 'inline_template',
-      '#template' => '<div class="byu-news-block">{{ content | raw }}</div>',
-      '#context' => [
-        'content' => $html,
-      ],
+      '#theme' => 'byu_news',
+      '#category' => $category,
+      '#maxDate' => $maxDate,
+      '#minDate' => $minDate,
+      '#storyLimit' => $storyLimit,
+      '#newsTags' => $newsTags,
       '#attached' => [
         'library' => [
-          'byu_news/byu_news'
+          'byu_news/byu_news',
+          'byu_news/news-component-js',
+          'byu_news/news-component-css'
         ]
       ]
     ];
