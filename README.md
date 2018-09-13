@@ -4,7 +4,7 @@ This Drupal 8 module allows users to place a block on their page which displays 
 ## Installation, Use & Configuration
 
 ### Installation
-1. Clone or download this repo into your project (If you download it, make sure to remove '-master' from the module folder name)
+1. Get this Module from drupal.org (via composer)
 2. Install the module on your Drupal site
 3. Place the BYU News block on your page
 
@@ -25,3 +25,9 @@ Default values are:
 * `min-date: today`
 * `max-date: 1 month prior`
 * `story-limit: 3`
+BYU News Drupal 8 Module
+This module pulls in the recent news articles for the Academic Category. It creates a block listing the 3 most recent Academic news articles. 
+You can see a demonstration of this module on the BYU homepage: https://www.byu.edu/academics
+
+## Next Updates to This Module
+We'd like to add the category option so there can be multiple news blocks and each could have a configuration option for which category to use and how many news articles to list.
