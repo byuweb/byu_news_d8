@@ -1,4 +1,4 @@
-# byu_news_d8
+# ***DEPRECATED*** byu_news_d8
 BYU News Drupal 8 Module
 
 
